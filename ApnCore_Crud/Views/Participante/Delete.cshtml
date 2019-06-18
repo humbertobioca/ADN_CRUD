@@ -1,0 +1,43 @@
+﻿@model ApnCore_Crud.Models.Participante
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<br />
+<h2>Deletar</h2>
+
+<h3>Deseja deletar este Participante ?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PPCODPAT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PPCODPAT)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PPFULLNAME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PPFULLNAME)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PPTOKEN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PPTOKEN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PPQRCODE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PPQRCODE)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Retorna para a Lista</a>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+﻿@model ApnCore_Crud.Models.Participante
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br />
+<h2>Detalhes</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PPCODPAT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PPCODPAT)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PPFULLNAME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PPFULLNAME)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PPTOKEN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PPTOKEN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PPQRCODE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PPQRCODE)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PPCODPAT }) |
+    <a asp-action="Index">Retornar para a Lista</a>
+</div>

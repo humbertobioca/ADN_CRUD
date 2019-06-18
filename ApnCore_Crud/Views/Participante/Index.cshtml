@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ApnCore_Crud.Models.Participante>
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<p>
+    <a asp-action="Create">Criar Novo Participante</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PPCODPAT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PPFULLNAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PPTOKEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PPQRCODE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PPCODPAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PPFULLNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PPTOKEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PPQRCODE)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id=item.PPCODPAT }) |
+                @Html.ActionLink("Detalhes", "Details", new { id=item.PPCODPAT }) |
+                @Html.ActionLink("Deletar", "Delete", new { id=item.PPCODPAT })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
